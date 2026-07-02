@@ -41,8 +41,7 @@ except Exception as e:
     st.stop()
 
 # ------------------------------------------------------------
-# 2. MUAT QUESTION BANK (file lokal, tidak perlu baca Sheets
-#    tiap kali form dibuka — lebih cepat & lebih sedikit titik gagal)
+# 2. MUAT QUESTION BANK (file lokal)
 # ------------------------------------------------------------
 QB_PATH = os.path.join(os.path.dirname(__file__), "question_bank.json")
 try:
@@ -94,9 +93,7 @@ def hitung_skor_dari_persen(rubrik, persen):
     return 1
 
 # ------------------------------------------------------------
-# 5. RENDER SEMUA PERTANYAAN (di luar st.form — supaya warning
-#    & uploader foto muncul REAL-TIME, bukan telat, sama seperti
-#    yang sudah diperbaiki di app.py)
+# 5. RENDER SEMUA PERTANYAAN (di luar st.form agar reaktif)
 # ------------------------------------------------------------
 jawaban = []  # menampung hasil tiap pertanyaan untuk disubmit nanti
 
@@ -104,7 +101,7 @@ for i, q in enumerate(questions):
     key_prefix = f"q{i}_{q['no']}"
     with st.container(border=True):
         badge = q["reg"] if q["reg"] else "—"
-        st.markdown(f"**{q['pertanyaan']}**  \n<span style='font-size:11px;color:gray'>{q['aspek']} · Ref: {badge}</span>", unsafe_allow_html=True)
+        st.markdown(f"**{q['pertanyaan']}** \n<span style='font-size:11px;color:gray'>{q['aspek']} · Ref: {badge}</span>", unsafe_allow_html=True)
 
         skor = None
         numerator = ""
@@ -115,6 +112,7 @@ for i, q in enumerate(questions):
             count_key = f"temuan_{key_prefix}"
             if count_key not in st.session_state:
                 st.session_state[count_key] = 0
+            
             c1, c2, c3 = st.columns([1, 2, 1])
             with c1:
                 if st.button("➖", key=f"minus_{key_prefix}"):
@@ -135,7 +133,7 @@ for i, q in enumerate(questions):
             m1.metric("Kepatuhan", f"{persen:.0f}%")
             m2.metric("Skor otomatis", skor)
 
-        else:  # mode "pilih" — dipandu deskripsi rubrik resmi, bukan pilih angka bebas
+        else:  # mode "pilih"
             opsi = [f"{t['skor']} — {t['desc']}" for t in sorted(q["rubrik"], key=lambda x: -x["skor"])]
             pilihan = st.radio("Pilih kondisi yang paling sesuai temuan lapangan:", options=opsi, index=0, key=f"pilih_{key_prefix}")
             skor = int(pilihan.split(" — ")[0])
@@ -155,6 +153,9 @@ for i, q in enumerate(questions):
 st.markdown("---")
 submit_btn = st.button("🚀 SUBMIT SELURUH AUDIT KE SHEVA AI DATABASE", use_container_width=True)
 
+# ------------------------------------------------------------
+# 6. LOGIKA SUBMIT DAN VALIDASI
+# ------------------------------------------------------------
 if submit_btn:
     errors = []
     if not auditor:
@@ -172,12 +173,18 @@ if submit_btn:
     else:
         with st.spinner(f"Mengirim {len(jawaban)} baris data ke database sentral..."):
             try:
-                timestamp_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                # REKOMENDASI PERBAIKAN: Mengunci waktu submisi di luar perulangan
+                waktu_submisi = datetime.now()
+                timestamp_now = waktu_submisi.strftime("%Y-%m-%d %H:%M:%S")
+                string_id_waktu = waktu_submisi.strftime("%Y%m%d%H%M%S")
+                
                 rows = []
                 for idx, j in enumerate(jawaban, start=1):
-                    id_audit = f"AUD-{datetime.now().strftime('%Y%m%d%H%M%S')}-{idx:03d}"
+                    # ID Audit sekarang memiliki basis kode waktu transaksi yang seragam per submisi
+                    id_audit = f"AUD-{string_id_waktu}-{idx:03d}"
                     status = "Closed" if j["skor"] >= 4 else "Open"
                     evidence = j["foto"].name if j["foto"] is not None else ""
+                    
                     rows.append([
                         id_audit, timestamp_now, auditor, periode, area,
                         j["aspek"], str(j["no"]), j["pertanyaan"],
@@ -185,6 +192,7 @@ if submit_btn:
                         str(j["skor"]), str(j["skor"]), j["reg"],
                         j["catatan"], evidence, status, "",
                     ])
+                
                 db_sheet.append_rows(rows)
                 st.balloons()
                 st.success(f"🎉 BERHASIL! {len(rows)} baris data audit tersimpan. SHEVA AI Agent sedang memproses sinkronisasi dasbor eksekutif.")
