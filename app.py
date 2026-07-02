@@ -31,8 +31,6 @@ except Exception as e:
     st.error(f"❌ Gagal koneksi ke database: {e}")
     st.stop()
 
-# Kode area HARUS sama persis dengan tab Area_Reference, supaya nanti bisa
-# di-join untuk routing PIC dan dashboard otomatis.
 AREA_OPTIONS = {
     "MT-LINE": "MT Line",
     "MT-RND": "MT R&D",
@@ -43,7 +41,7 @@ AREA_OPTIONS = {
     "PRD-GUDANGJADI": "Produksi - Gudang Jadi",
 }
 
-# 3. INFORMASI UMUM (di luar form — boleh, ini tidak butuh reaksi dinamis)
+# 3. INFORMASI UMUM
 st.subheader("📋 1. Informasi Umum Inspeksi")
 col1, col2 = st.columns(2)
 with col1:
@@ -60,41 +58,63 @@ st.markdown("---")
 st.subheader("🔍 2. Parameter Kepatuhan K3 & Sosial")
 st.write("Isi evaluasi kondisi riil di lantai pabrik saat ini:")
 
-# PENTING: skor DILETAKKAN DI LUAR st.form(). Widget di dalam st.form tidak
-# memicu rerun saat diubah, sehingga warning + uploader foto baru muncul
-# bersamaan dengan klik submit — terlambat untuk benar-benar melampirkan
-# bukti. Di luar form, tiap perubahan skor langsung memicu rerun, sehingga
-# "AI Warning Logic" muncul dinamis persis saat auditor memilih skor rendah.
+# Fungsi pembantu untuk perhitungan skor
+def hitung_skor_kepatuhan(persen: float) -> int:
+    if persen >= 90: return 5
+    if persen >= 80: return 4
+    if persen >= 70: return 3
+    if persen >= 60: return 2
+    return 1
 
-# --- PERTANYAAN 1 ---
+# --- PERTANYAAN 1 (SUDAH DIUBAH MENJADI COUNTER BISA KETIK MANUAL) ---
 st.markdown("### **P1. Aspek K3 - Proteksi Kebakaran**")
 st.write("Apakah semua APAR di area kerja terpasang jelas, tidak terhalang barang, dan kartu inspeksi bulanan dalam kondisi aktif?")
-skor_1 = st.radio("Skor Kepatuhan P1:", options=[1, 2, 3, 4, 5], index=4, key="skor_p1", horizontal=True)
+
+total_apar_p1 = st.number_input("Total APAR yang diperiksa:", min_value=1, value=10, step=1, key="total_p1")
+
+if "temuan_p1" not in st.session_state:
+    st.session_state.temuan_p1 = 0
+
+st.write("Temuan: APAR terhalang / rusak / kartu kontrol mati")
+c1_p1, c2_p1, c3_p1 = st.columns([1, 2, 1])
+with c1_p1:
+    if st.button("➖", key="minus_p1"):
+        st.session_state.temuan_p1 = max(0, st.session_state.temuan_p1 - 1)
+with c2_p1:
+    # Menggunakan number_input tanpa label agar bisa diketik manual via keyboard
+    st.session_state.temuan_p1 = st.number_input(
+        "Jumlah temuan P1", 
+        min_value=0, 
+        max_value=total_apar_p1, 
+        value=st.session_state.temuan_p1, 
+        step=1, 
+        label_visibility="collapsed",
+        key="input_manual_p1"
+    )
+with c3_p1:
+    if st.button("➕", key="plus_p1"):
+        st.session_state.temuan_p1 = min(total_apar_p1, st.session_state.temuan_p1 + 1)
+
+temuan_p1 = st.session_state.temuan_p1
+apar_patuh_p1 = total_apar_p1 - temuan_p1
+persen_p1 = (apar_patuh_p1 / total_apar_p1) * 100
+skor_1 = hitung_skor_kepatuhan(persen_p1)
+
+mcol1_p1, mcol2_p1 = st.columns(2)
+mcol1_p1.metric("Kepatuhan APAR", f"{persen_p1:.0f}%")
+mcol2_p1.metric("Skor otomatis P1", skor_1)
+
 catatan_1 = st.text_input("Catatan Temuan Lapangan P1 (Wajib jika skor < 4):", key="catat_p1", placeholder="Isi detail jika ada pelanggaran...")
 foto_1 = None
 if skor_1 < 4:
-    st.warning("⚠️ **SHEVA AI Warning:** Skor di bawah standar! AI Agent akan otomatis menandai ini sebagai 'OPEN target' dan memicu alert perbaikan.")
+    st.warning("⚠️ **SHEVA AI Warning:** Kepatuhan di bawah standar! AI Agent akan otomatis menandai ini sebagai 'OPEN target' dan memicu alert perbaikan.")
     foto_1 = st.file_uploader("📸 Unggah Foto Bukti Pelanggaran (Maks 5MB):", type=["jpg", "png", "jpeg"], key="foto_p1")
 
 st.markdown("---")
 
-# --- PERTANYAAN 2 (skor otomatis dari counter, bukan pilih manual) ---
+# --- PERTANYAAN 2 (COUNTER SEKARANG BISA KETIK MANUAL) ---
 st.markdown("### **P2. Aspek K3 - Keamanan Mesin Produksi**")
 st.write("Apakah seluruh mesin jahit (Sewing Machine) telah dilengkapi dengan komponen keselamatan standar seperti *finger guard* dan *pulley guard*?")
-
-def hitung_skor_kepatuhan(persen: float) -> int:
-    # Rubrik ini diambil persis dari file H-CPI asli (sheet Produksi Sewing,
-    # pertanyaan needle guard/pulley guard). Kalau pertanyaan lain punya
-    # ambang batas berbeda, ubah angka di bawah ini sesuai Question_Bank.
-    if persen >= 90:
-        return 5
-    if persen >= 80:
-        return 4
-    if persen >= 70:
-        return 3
-    if persen >= 60:
-        return 2
-    return 1
 
 total_mesin_p2 = st.number_input("Total mesin sewing yang diperiksa:", min_value=1, value=100, step=1, key="total_p2")
 
@@ -102,13 +122,22 @@ if "temuan_p2" not in st.session_state:
     st.session_state.temuan_p2 = 0
 
 st.write("Temuan: mesin tanpa needle guard / pulley guard yang sesuai")
-c1, c2, c3 = st.columns([1, 2, 1])
-with c1:
+c1_p2, c2_p2, c3_p2 = st.columns([1, 2, 1])
+with c1_p2:
     if st.button("➖", key="minus_p2"):
         st.session_state.temuan_p2 = max(0, st.session_state.temuan_p2 - 1)
-with c2:
-    st.markdown(f"<div style='text-align:center;font-size:28px;font-weight:bold'>{st.session_state.temuan_p2}</div>", unsafe_allow_html=True)
-with c3:
+with c2_p2:
+    # Menggunakan number_input tanpa label agar bisa diketik manual via keyboard
+    st.session_state.temuan_p2 = st.number_input(
+        "Jumlah temuan P2", 
+        min_value=0, 
+        max_value=total_mesin_p2, 
+        value=st.session_state.temuan_p2, 
+        step=1, 
+        label_visibility="collapsed",
+        key="input_manual_p2"
+    )
+with c3_p2:
     if st.button("➕", key="plus_p2"):
         st.session_state.temuan_p2 = min(total_mesin_p2, st.session_state.temuan_p2 + 1)
 
@@ -117,9 +146,9 @@ mesin_patuh_p2 = total_mesin_p2 - temuan_p2
 persen_p2 = (mesin_patuh_p2 / total_mesin_p2) * 100
 skor_2 = hitung_skor_kepatuhan(persen_p2)
 
-mcol1, mcol2 = st.columns(2)
-mcol1.metric("Kepatuhan", f"{persen_p2:.0f}%")
-mcol2.metric("Skor otomatis", skor_2)
+mcol1_p2, mcol2_p2 = st.columns(2)
+mcol1_p2.metric("Kepatuhan Mesin", f"{persen_p2:.0f}%")
+mcol2_p2.metric("Skor otomatis P2", skor_2)
 
 catatan_2 = st.text_input("Catatan Temuan Lapangan P2 (Wajib jika skor < 4):", key="catat_p2", placeholder="Isi detail jika ada pelanggaran...")
 foto_2 = None
@@ -129,8 +158,7 @@ if skor_2 < 4:
 
 st.markdown("---")
 
-# 4. SUBMIT (tombol biasa, bukan form_submit_button — semua nilai di atas
-# sudah "hidup" di rerun ini karena tidak dibungkus st.form)
+# 4. LOGIKA SUBMIT
 submit_btn = st.button("🚀 SUBMIT DATA KE SHEVA AI DATABASE")
 
 if submit_btn:
@@ -152,29 +180,27 @@ if submit_btn:
     else:
         with st.spinner("Mengirim data ke database sentral..."):
             try:
-                timestamp_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                # Mengunci waktu submisi seragam di awal klik
+                waktu_submisi = datetime.now()
+                timestamp_now = waktu_submisi.strftime("%Y-%m-%d %H:%M:%S")
+                string_id_waktu = waktu_submisi.strftime("%Y%m%d%H%M%S")
 
-                # Catatan: untuk versi Golden Path besok, nama file dicatat
-                # sebagai bukti bahwa foto sudah dilampirkan auditor. Upload
-                # fisik ke Google Drive (agar Link_Evidence berisi URL asli)
-                # bisa ditambahkan setelah demo — lihat catatan di bagian
-                # bawah file ini untuk kode opsionalnya.
                 evidence_1 = foto_1.name if foto_1 is not None else ""
                 evidence_2 = foto_2.name if foto_2 is not None else ""
 
-                id_audit_1 = f"AUD-{datetime.now().strftime('%Y%m%d%H%M%S')}-01"
+                id_audit_1 = f"AUD-{string_id_waktu}-01"
                 status_1 = "Closed" if skor_1 >= 4 else "Open"
                 row_1 = [id_audit_1, timestamp_now, auditor, periode, area,
-                          "I. HEALTH, SAFETY, ENVIRONMENT (HSE)", "1", "Proteksi APAR Lapangan",
-                          "", "", str(skor_1), str(skor_1), "GOV-11", catatan_1, evidence_1,
-                          status_1, ""]
+                         "I. HEALTH, SAFETY, ENVIRONMENT (HSE)", "1", "Proteksi APAR Lapangan",
+                         str(apar_patuh_p1), str(total_apar_p1), str(skor_1), str(skor_1), "GOV-11", catatan_1, evidence_1,
+                         status_1, ""]
 
-                id_audit_2 = f"AUD-{datetime.now().strftime('%Y%m%d%H%M%S')}-02"
+                id_audit_2 = f"AUD-{string_id_waktu}-02"
                 status_2 = "Closed" if skor_2 >= 4 else "Open"
                 row_2 = [id_audit_2, timestamp_now, auditor, periode, area,
-                          "I. HEALTH, SAFETY, ENVIRONMENT (HSE)", "2", "Finger Guard Mesin Sewing",
-                          str(mesin_patuh_p2), str(total_mesin_p2), str(skor_2), str(skor_2), "SYS-04", catatan_2, evidence_2,
-                          status_2, ""]
+                         "I. HEALTH, SAFETY, ENVIRONMENT (HSE)", "2", "Finger Guard Mesin Sewing",
+                         str(mesin_patuh_p2), str(total_mesin_p2), str(skor_2), str(skor_2), "SYS-04", catatan_2, evidence_2,
+                         status_2, ""]
 
                 db_sheet.append_rows([row_1, row_2])
 
@@ -182,17 +208,3 @@ if submit_btn:
                 st.success("🎉 BERHASIL! Data sukses terekam. SHEVA AI Agent sedang memproses sinkronisasi dasbor eksekutif.")
             except Exception as err:
                 st.error(f"Gagal mengirim data: {err}")
-
-# ---------------------------------------------------------------------------
-# CATATAN UNTUK PENGEMBANGAN SETELAH DEMO (tidak perlu dikerjakan malam ini):
-#
-# 1. Upload foto fisik ke Google Drive: scope "drive" sudah ada di atas,
-#    jadi bisa pakai googleapiclient.discovery.build("drive", "v3",
-#    credentials=creds) untuk upload file dari foto_1/foto_2, lalu simpan
-#    URL-nya (bukan cuma nama file) ke kolom Link_Evidence.
-# 2. Ganti client.open("SHEVA - AUDIT DIGITAL") jadi client.open_by_key(ID)
-#    — lebih tahan terhadap kemungkinan nama file duplikat di Drive.
-# 3. Kode Regulatory_Source ("GOV-11", "SYS-04") sudah disamakan format
-#    dengan tab Master_Regulatory — pastikan kode ini memang ada persis di
-#    tab tersebut, sesuaikan kalau nomornya beda.
-# ---------------------------------------------------------------------------
