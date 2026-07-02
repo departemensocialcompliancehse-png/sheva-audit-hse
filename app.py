@@ -20,7 +20,7 @@ try:
     client = gspread.authorize(creds)
     
     # Membuka Spreadsheet Utama Anda (Ganti teks di bawah jika nama file di Drive berbeda)
-    sheet = client.open("RENCANA PENGEMBANGAN SHEVA")
+    sheet = client.open("SHEVA - AUDIT DIGITAL")
     db_sheet = sheet.worksheet("AUDIT_CHECKLIST_DATABASE")
     q_sheet = sheet.worksheet("Question_Bank")
 except Exception as e:
