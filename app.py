@@ -2,6 +2,7 @@ import streamlit as st
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
+import requests  # Ditambahkan untuk integrasi ke Webhook Make.com
 
 # 1. SETUP KONFIGURASI HALAMAN
 st.set_page_config(page_title="SHEVA HSE COMPLIANCE", page_icon="🛡️", layout="centered")
@@ -43,7 +44,7 @@ AREA_OPTIONS = {
     "MT-LINE": "MT Line",
     "MT-RND": "MT R&D",
     "PRD-SEWING": "Produksi - Sewing",
-    "PRD-CUTTING": "Produksi - Cutting",
+    "PRD-CUTTING": "Produensing - Cutting",
     "PRD-ACCESSORIES": "Produksi - Accessories",
     "PRD-DISTRIBUSI": "Produksi - Distribusi",
     "PRD-GUDANGJADI": "Produksi - Gudang Jadi",
@@ -119,7 +120,7 @@ mcol2_p1.metric("Skor otomatis P1", skor_1)
 catatan_1 = st.text_input("Catatan Temuan Lapangan P1 (Wajib jika skor < 4):", key="catat_p1", placeholder="Isi detail jika ada pelanggaran...")
 foto_1 = None
 if skor_1 < 4:
-    st.warning("⚠️ **SHEVA AI Warning:** Kepatuhan di bawah standar! AI Agent akan otomatis menandai ini sebagai 'OPEN target' dan memicu alert perbaikan.")
+    st.warning("⚠️ **SHEVA AI Warning:** Kepatuhan di bawah standar! AI Agent akan otomatis menandai ini sebagai 'OPEN target' its dan memicu alert perbaikan.")
     foto_1 = st.file_uploader("📸 Unggah Foto Bukti Pelanggaran (Maks 5MB):", type=["jpg", "png", "jpeg"], key="foto_p1")
 
 st.markdown("---")
@@ -198,8 +199,7 @@ if submit_btn:
                 evidence_1 = foto_1.name if foto_1 is not None else ""
                 evidence_2 = foto_2.name if foto_2 is not None else ""
 
-                # FORMULASI KLUNCI: Gabungkan kode factory dan kode area (Kolom ke-5 di Google Sheets)
-                # Contoh hasil akhir di kolom Area_Kode: "FACTORY-A / PRD-SEWING"
+                # FORMULASI KUNCI: Gabungkan kode factory dan kode area
                 area_gabungan = f"{factory_select} / {area_select}"
 
                 id_audit_1 = f"AUD-{string_id_waktu}-01"
@@ -216,7 +216,26 @@ if submit_btn:
                          str(mesin_patuh_p2), str(total_mesin_p2), str(skor_2), str(skor_2), "SYS-04", catatan_2, evidence_2,
                          status_2, ""]
 
+                # 1. Kirim data ke Google Sheets
                 db_sheet.append_rows([row_1, row_2])
+
+                # 2. INTEGRASI PERMANEN KE MAKE.COM WEBHOOK
+                # Gantilah URL di bawah ini dengan URL asli dari modul Webhooks 1 Anda
+                URL_WEBHOOK_MAKE = "https://hook.eu1.make.com/v0scqi2q6hjurane29w6i6yviohv1jke" 
+                
+                payload_webhook = {
+                    "sumber_data": "STREAMLIT_AUDIT_APP",
+                    "auditor": auditor,
+                    "factory": factory_select,
+                    "area": area_select,
+                    "status_p1": status_1,
+                    "status_p2": status_2
+                }
+                
+                try:
+                    requests.post(URL_WEBHOOK_MAKE, json=payload_webhook, timeout=5)
+                except Exception:
+                    pass  # Agar aplikasi tidak crash jika koneksi internet lokal ke Webhook tidak stabil
 
                 st.balloons()
                 st.success("🎉 BERHASIL! Data sukses terekam dengan klasifikasi Factory. Dashboard eksekutif siap disinkronkan.")
