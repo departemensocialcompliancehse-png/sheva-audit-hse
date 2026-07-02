@@ -16,7 +16,7 @@ try:
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
     # Mengambil kredensial dari sistem rahasia Streamlit (nanti kita setup di akhir)
     creds_dict = st.secrets["gcp_service_account"]
-    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(dict(creds_dict), scope)
     client = gspread.authorize(creds)
     
     # Membuka Spreadsheet Utama Anda (Ganti teks di bawah jika nama file di Drive berbeda)
