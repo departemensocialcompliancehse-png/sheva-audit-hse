@@ -1,0 +1,3860 @@
+{
+ "MT-LINE": [
+  {
+   "no": 1.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah pekerjaan mekanik dilakukan dengan prosedur aman (pengamanan benda kerja, posisi kerja aman, tidak improvisasi berbahaya)?",
+   "reg": "GOV-01, BUY-02, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 2.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah mesin dipastikan dalam kondisi aman (mati total, energi mekanik dilepas) sebelum dilakukan perbaikan?",
+   "reg": "GOV-01, BUY-05, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 3.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah pekerja MT menggunakan APD sesuai jenis pekerjaan (helm las, face shield, sarung tangan, sepatu safety)?",
+   "reg": "GOV-04, BUY-08, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 4.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah alat kerja MT (grinder, bor, mesin potong) dalam kondisi aman, terawat, dan digunakan sesuai fungsinya?",
+   "reg": "GOV-01, BUY-05,. BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 5.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan area red line / safety zone bebas dari barang, material, dan mesin?",
+   "reg": "BUY-03, BUY-04, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 6.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan akses/jalur evakuasi bebas dari barang, material, dan mesin?",
+   "reg": "GOV-06, BUY-3, SYS-01",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Tidak ada pelanggaran",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "Minor saja",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Ditemukan 2 temuan major",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "Major < 1",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "Kritikal",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 7.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah aspek keselamatan kerja disampaikan secara konsisten dalam briefing pagi sesuai dengan standar perusahaan?",
+   "reg": "BUY-11, SYS-02, SYS-01",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Setiap hari, dan ≥ 80% hari menggunakan topik berbeda",
+     "pct": 80
+    },
+    {
+     "skor": 4,
+     "desc": "Setiap hari, dan topik sama atau dominan sama",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Tidak setiap hari (Minimal 75% hari kerja)",
+     "pct": 75
+    },
+    {
+     "skor": 2,
+     "desc": "Briefing <75% hari kerja",
+     "pct": 75
+    },
+    {
+     "skor": 1,
+     "desc": "Tidak ada materi safety briefing",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 8.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh pekerja memiliki emergency awareness yang sesuai?",
+   "reg": "BUY-04, BUY-11, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 9.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Kepatuhan SLA Penanganan Temuan Safety Patrol",
+   "reg": "SYS-01, SYS-02, SYS-03",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% close on time",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 10.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penampilan pekerja (rambut, aksesoris, make-up) tidak mengganggu keselamatan, kebersihan, dan kualitas produk?",
+   "reg": "INT-02, INT-08, GOV-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 11.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penggunaan, penyimpanan, dan pembuangan oli mesin serta kain majun bekas di area kerja telah dikelola secara aman, terkendali, dan sesuai dengan ketentuan K3L perusahaan?",
+   "reg": "GOV-08, BUY-07, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 12.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penggunaan bahan kimia ringan (lem, solvent, pelumas minor) telah dikelola dengan aman, berlabel, dan tidak menimbulkan risiko kebakaran atau paparan?",
+   "reg": "GOV-09, GOV-03, BUY-07",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 13.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah area kerja bersih, rapi, dan bebas dari potensi tersandung, tergelincir, atau bahaya lainnya (housekeeping)?",
+   "reg": "GOV-01, BUY-03, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% safety patrol tanpa temuan housekeeping",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  }
+ ],
+ "MT-RND": [
+  {
+   "no": 1.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah fire watch, APAR, dan pengamanan area panas tersedia dan diterapkan selama hot work?",
+   "reg": "GOV-06, BUY-03, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 2.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah tabung gas, regulator, selang, dan/atau mesin las dalam kondisi aman dan disimpan sesuai ketentuan?",
+   "reg": "GOV-01, GOV-06, BUY-07",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 3.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah pekerjaan mekanik dilakukan dengan prosedur aman (pengamanan benda kerja, posisi kerja aman, tidak improvisasi berbahaya)?",
+   "reg": "GOV-01, BUY-02, BUY-05",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 4.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah mesin dipastikan dalam kondisi aman (mati total, energi mekanik dilepas) sebelum dilakukan perbaikan?",
+   "reg": "GOV-01, BUY-02, BUY-05",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 5.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah pekerja MT menggunakan APD sesuai jenis pekerjaan (helm las, face shield, sarung tangan, sepatu safety)?",
+   "reg": "GOV-04, BUY-08, INT-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 6.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah alat kerja MT (grinder, bor, mesin potong) dalam kondisi aman, terawat, dan digunakan sesuai fungsinya?",
+   "reg": "GOV-01, BUY-05, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 7.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan area red line / safety zone bebas dari barang, material, dan mesin?",
+   "reg": "GOV-01, BUY-03, BUY-13",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 8.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan akses/jalur evakuasi bebas dari barang, material, dan mesin?",
+   "reg": "GOV-06, BUY-03, BUY-13",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Tidak ada pelanggaran",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "Minor saja",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Major < 2",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "Major < 1",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "Kritikal",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 9.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah aspek keselamatan kerja disampaikan secara konsisten dalam briefing pagi sesuai dengan standar perusahaan?",
+   "reg": "BUY-11, SYS-01, INT-08",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Setiap hari, dan ≥ 80% hari menggunakan topik berbeda",
+     "pct": 80
+    },
+    {
+     "skor": 4,
+     "desc": "Setiap hari, dan topik sama atau dominan sama",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Tidak setiap hari (Minimal 75% hari kerja)",
+     "pct": 75
+    },
+    {
+     "skor": 2,
+     "desc": "Briefing <75% hari kerja",
+     "pct": 75
+    },
+    {
+     "skor": 1,
+     "desc": "Tidak ada materi safety briefing",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 10.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh pekerja memiliki emergency awareness yang sesuai?",
+   "reg": "BUY-04, BUY-11, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 11.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Kepatuhan SLA Penanganan Temuan Safety Patrol",
+   "reg": "SYS-02, SYS-03, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% close on time",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 12.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penampilan pekerja (rambut, aksesoris, make-up) tidak mengganggu keselamatan, kebersihan, dan kualitas produk?",
+   "reg": "INT-02, INT-08, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 13.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penggunaan, penyimpanan, dan pembuangan oli mesin serta kain majun bekas di area kerja telah dikelola secara aman, terkendali, dan sesuai dengan ketentuan K3L perusahaan?",
+   "reg": "GOV-08, BUY-07, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 14.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penggunaan bahan kimia telah dikelola dengan aman, berlabel, dan tidak menimbulkan risiko kebakaran atau paparan?",
+   "reg": "GOV-09, BUY-07, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 15.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah area kerja bersih, rapi, dan bebas dari potensi tersandung, tergelincir, atau bahaya lainnya (housekeeping)?",
+   "reg": "GOV-01, BUY-13, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% safety patrol tanpa temuan housekeeping",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  }
+ ],
+ "PRD-SEWING": [
+  {
+   "no": 1.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh mesin jahit memiliki needle guard yang terpasang dan sesuai?",
+   "reg": "GOV-01, BUY-05",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 2.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh mesin jahit memiliki upper dan under pulley guard yang terpasang dan sesuai?",
+   "reg": "GOV-01, BUY-05",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 3.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah workstation sudah sesuai standar ergonomi?",
+   "reg": "GOV-03, BUY-09",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 4.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah pekerja menggunakan masker yang sesuai?",
+   "reg": "GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 5.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah setiap pekerja sudah menggunakan sepatu yang sesuai?",
+   "reg": "GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 6.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah setiap alat kerja sudah dilengkapi tali pengaman?",
+   "reg": "GOV-01, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 7.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan area red line / safety zone bebas dari barang, material, dan mesin?",
+   "reg": "GOV-01, BUY-03",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 8.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Berapa persentase mesin jahit dan peralatan listrik dengan instalasi listrik aman dan tidak rusak (kabel utuh, stop kontak aman, tidak ada sambungan liar) ?",
+   "reg": "GOV-01, BUY-06",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 9.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan akses/jalur evakuasi bebas dari barang, material, dan mesin?",
+   "reg": "GOV-06, BUY-03",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Tidak ada pelanggaran",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "Minor saja",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Major < 2",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "Major < 1",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "Kritikal",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 10.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah aspek keselamatan kerja disampaikan secara konsisten dalam briefing pagi sesuai dengan standar perusahaan?",
+   "reg": "GOV-02, SYS-01",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Setiap hari, dan ≥ 80% hari menggunakan topik berbeda",
+     "pct": 80
+    },
+    {
+     "skor": 4,
+     "desc": "Setiap hari, dan topik sama atau dominan sama",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Tidak setiap hari (Minimal 75% hari kerja)",
+     "pct": 75
+    },
+    {
+     "skor": 2,
+     "desc": "Briefing <75% hari kerja",
+     "pct": 75
+    },
+    {
+     "skor": 1,
+     "desc": "Tidak ada materi safety briefing",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 11.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh pekerja memiliki emergency awareness yang sesuai?",
+   "reg": "GOV-02, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 12.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Kepatuhan SLA Penanganan Temuan Safety Patrol",
+   "reg": "GOV-02, BUY-10, SYS-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% close on time",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 13.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penampilan pekerja (rambut, aksesoris, make-up) tidak mengganggu keselamatan, kebersihan, dan kualitas produk?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 14.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penggunaan, penyimpanan, dan pembuangan oli mesin serta kain majun bekas di area kerja telah dikelola secara aman, terkendali, dan sesuai dengan ketentuan K3L perusahaan?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 15.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah area kerja bersih, rapi, dan bebas dari potensi tersandung, tergelincir, atau bahaya lainnya (housekeeping)?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% safety patrol tanpa temuan housekeeping",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  }
+ ],
+ "PRD-CUTTING": [
+  {
+   "no": 1.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh mesin memiliki double button yang terpasang dan sesuai?",
+   "reg": "GOV-01, BUY-05",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 2.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh mesin cutting memiliki emergency stop?",
+   "reg": "GOV-01, BUY-05",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 3.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah workstation sudah sesuai standar ergonomi?",
+   "reg": "GOV-03, BUY-09",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 4.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah pekerja menggunakan masker yang sesuai?",
+   "reg": "GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 5.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah setiap pekerja sudah menggunakan sepatu yang sesuai?",
+   "reg": "GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 6.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah setiap alat kerja sudah dilengkapi tali pengaman?",
+   "reg": "GOV-01, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 7.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan area red line / safety zone bebas dari barang, material, dan mesin?",
+   "reg": "GOV-01, BUY-03",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 8.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Berapa persentase mesin cutting dan peralatan listrik dengan instalasi listrik aman dan tidak rusak (kabel utuh, stop kontak aman, tidak ada sambungan liar) ?",
+   "reg": "GOV-01, BUY-06",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 9.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan akses/jalur evakuasi bebas dari barang, material, dan mesin?",
+   "reg": "GOV-06, BUY-03",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Tidak ada pelanggaran",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "Minor saja",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Major < 2",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "Major < 1",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "Kritikal",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 10.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah aspek keselamatan kerja disampaikan secara konsisten dalam briefing pagi sesuai dengan standar perusahaan?",
+   "reg": "GOV-02, SYS-01",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Setiap hari, dan ≥ 80% hari menggunakan topik berbeda",
+     "pct": 80
+    },
+    {
+     "skor": 4,
+     "desc": "Setiap hari, dan topik sama atau dominan sama",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Tidak setiap hari (Minimal 75% hari kerja)",
+     "pct": 75
+    },
+    {
+     "skor": 2,
+     "desc": "Briefing <75% hari kerja",
+     "pct": 75
+    },
+    {
+     "skor": 1,
+     "desc": "Tidak ada materi safety briefing",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 11.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh pekerja memiliki emergency awareness yang sesuai?",
+   "reg": "GOV-02, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 12.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Kepatuhan SLA Penanganan Temuan Safety Patrol",
+   "reg": "GOV-02, BUY-10, SYS-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% close on time",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 13.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penampilan pekerja (rambut, aksesoris, make-up) tidak mengganggu keselamatan, kebersihan, dan kualitas produk?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 14.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penggunaan, penyimpanan, dan pembuangan oli mesin serta kain majun bekas di area cutting telah dikelola secara aman, terkendali, dan sesuai dengan ketentuan K3L perusahaan?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 15.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah area kerja bersih, rapi, dan bebas dari potensi tersandung, tergelincir, atau bahaya lainnya (housekeeping)?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% safety patrol tanpa temuan housekeeping",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  }
+ ],
+ "PRD-ACCESSORIES": [
+  {
+   "no": 1.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah workstation kerja (meja, kursi, posisi kerja) telah memenuhi standar ergonomi dan tidak menyebabkan postur kerja berisiko?",
+   "reg": "GOV-02 / BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 2.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah pekerja menggunakan masker yang sesuai?",
+   "reg": "GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 3.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah setiap pekerja sudah menggunakan sepatu yang sesuai?",
+   "reg": "GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 4.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah pekerja menggunakan sarung tangan / finger glove yang sesuai?",
+   "reg": "GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 5.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah setiap alat kerja sudah dilengkapi tali pengaman?",
+   "reg": "GOV-01, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 6.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan area red line / safety zone bebas dari barang, material, dan mesin?",
+   "reg": "GOV-01, BUY-03",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 7.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan akses/jalur evakuasi bebas dari barang, material, dan mesin?",
+   "reg": "GOV-06, BUY-03",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Tidak ada pelanggaran",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "Minor saja",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Major < 2",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "Major < 1",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "Kritikal",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 8.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah aspek keselamatan kerja disampaikan secara konsisten dalam briefing pagi sesuai dengan standar perusahaan?",
+   "reg": "GOV-02, SYS-01",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Setiap hari, dan ≥ 80% hari menggunakan topik berbeda",
+     "pct": 80
+    },
+    {
+     "skor": 4,
+     "desc": "Setiap hari, dan topik sama atau dominan sama",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Tidak setiap hari (Minimal 75% hari kerja)",
+     "pct": 75
+    },
+    {
+     "skor": 2,
+     "desc": "Briefing <75% hari kerja",
+     "pct": 75
+    },
+    {
+     "skor": 1,
+     "desc": "Tidak ada materi safety briefing",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 9.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh pekerja memiliki emergency awareness yang sesuai?",
+   "reg": "GOV-02, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 10.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Kepatuhan SLA Penanganan Temuan Safety Patrol",
+   "reg": "GOV-02, BUY-10, SYS-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% close on time",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 11.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penampilan pekerja (rambut, aksesoris, make-up) tidak mengganggu keselamatan, kebersihan, dan kualitas produk?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 12.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penggunaan, penyimpanan, dan pembuangan bahan kimia serta kain majun bekas di area kerja telah dikelola secara aman, terkendali, dan sesuai dengan ketentuan K3L perusahaan?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 13.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah area kerja bersih, rapi, dan bebas dari potensi tersandung, tergelincir, atau bahaya lainnya (housekeeping)?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% safety patrol tanpa temuan housekeeping",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  }
+ ],
+ "PRD-DISTRIBUSI": [
+  {
+   "no": 1.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah workstation kerja (meja, kursi, posisi kerja) telah memenuhi standar ergonomi dan tidak menyebabkan postur kerja berisiko?",
+   "reg": "GOV-02 / BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 2.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah pekerja menggunakan masker yang sesuai?",
+   "reg": "GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 3.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah setiap pekerja sudah menggunakan sepatu yang sesuai?",
+   "reg": "GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 4.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah pekerja menggunakan sarung tangan / finger glove yang sesuai?",
+   "reg": "GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 5.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah setiap alat kerja sudah dilengkapi tali pengaman?",
+   "reg": "GOV-01, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 6.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan area red line / safety zone bebas dari barang, material, dan mesin?",
+   "reg": "GOV-01, BUY-03",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 7.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan akses/jalur evakuasi bebas dari barang, material, dan mesin?",
+   "reg": "GOV-06, BUY-03",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Tidak ada pelanggaran",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "Minor saja",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Major < 2",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "Major < 1",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "Kritikal",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 8.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah aspek keselamatan kerja disampaikan secara konsisten dalam briefing pagi sesuai dengan standar perusahaan?",
+   "reg": "GOV-02, SYS-01",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Setiap hari, dan ≥ 80% hari menggunakan topik berbeda",
+     "pct": 80
+    },
+    {
+     "skor": 4,
+     "desc": "Setiap hari, dan topik sama atau dominan sama",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Tidak setiap hari (Minimal 75% hari kerja)",
+     "pct": 75
+    },
+    {
+     "skor": 2,
+     "desc": "Briefing <75% hari kerja",
+     "pct": 75
+    },
+    {
+     "skor": 1,
+     "desc": "Tidak ada materi safety briefing",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 9.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh pekerja memiliki emergency awareness yang sesuai?",
+   "reg": "GOV-02, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 10.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Kepatuhan SLA Penanganan Temuan Safety Patrol",
+   "reg": "GOV-02, BUY-10, SYS-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% close on time",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 11.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penampilan pekerja (rambut, aksesoris, make-up) tidak mengganggu keselamatan, kebersihan, dan kualitas produk?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 12.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penggunaan, penyimpanan, dan pembuangan bahan kimia serta kain majun bekas terkontaminasi di area kerja telah dikelola secara aman, terkendali, dan sesuai dengan ketentuan K3L perusahaan?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 13.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah area kerja bersih, rapi, dan bebas dari potensi tersandung, tergelincir, atau bahaya lainnya (housekeeping)?",
+   "reg": "GOV-01, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% safety patrol tanpa temuan housekeeping",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  }
+ ],
+ "PRD-GUDANGJADI": [
+  {
+   "no": 1.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penumpukan barang di pallet dilakukan dengan aman, stabil, dan sesuai kapasitas?",
+   "reg": "GOV-01, BUY-13, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 95%",
+     "pct": 95
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 70%",
+     "pct": 70
+    }
+   ]
+  },
+  {
+   "no": 2.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah area kerja bebas dari risiko jatuh, tertimpa, atau tersandung?",
+   "reg": "GOV-01, BUY-02, BUY-09",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Tidak ditemukan risiko",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "Temuan minor 1 atau kurang",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Temuan minor > 1",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "Temuan major tanpa near miss",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "Temuan major, terbukti ada near miss",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 3.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah penggunaan handlift/manual forklift dilakukan aman dan sesuai prosedur?",
+   "reg": "GOV-05, BUY-09, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 4.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah akses gudang jadi dikendalikan dan tercatat?",
+   "reg": "BUY-14, BUY-01, SYS-01. INT-01",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "100% akses terkendali dan tercatat",
+     "pct": 100
+    },
+    {
+     "skor": 4,
+     "desc": "Minor gap administratif",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Ada akses tanpa log",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "Akses longgar",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "Akses bebas",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 5.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah proses stuffing / loading di loading dock terkendali dan sesuai CTPAT?",
+   "reg": "BUY-14, BUY-01, BUY-10. SYS-01",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "100% stuffing comply & tidak ada critical bypass",
+     "pct": 100
+    },
+    {
+     "skor": 4,
+     "desc": "≥ 95% comply, tanpa critical bypass",
+     "pct": 95
+    },
+    {
+     "skor": 3,
+     "desc": "85 - 94% comply, tanpa critical bypass",
+     "pct": 94
+    },
+    {
+     "skor": 2,
+     "desc": "<85% comply, tanpa critical bypass",
+     "pct": 85
+    },
+    {
+     "skor": 1,
+     "desc": "Ada minimal 1 critical bypass",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 6.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah kepatuhan akses/jalur evakuasi bebas dari barang, material, dan mesin?",
+   "reg": "GOV-06, BUY-3, SYS-01",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Tidak ada pelanggaran",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "Minor saja",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Major < 2",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "Major < 1",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "Kritikal",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 7.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Kabel listrik terbuka/tidak terlindung, kabel tanpa conducting, kabel digantung sembarangan, kabel melewati lantai tanpa pelindung beresiko tersandung,terkelupas korsleting,kebakaran",
+   "reg": "GOV-01, BUY-06, BUY-13",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 8.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Kabel listrik dekat bahan mudah terbakar, panel terhalang barang, instalasi listrik diarea basah tanpa proteksi, kabel listrik bawah rak tanpa pelindung, tidak ada grounding",
+   "reg": "GOV-01, GOV-06, BUY-06, BUY-13",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 9.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah aspek keselamatan kerja disampaikan secara konsisten dalam briefing pagi sesuai dengan standar perusahaan?",
+   "reg": "BUY-11, SYS-01, SYS-02",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Setiap hari, dan ≥ 80% hari menggunakan topik berbeda",
+     "pct": 80
+    },
+    {
+     "skor": 4,
+     "desc": "Setiap hari, dan topik sama atau dominan sama",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "Tidak setiap hari (Minimal 75% hari kerja)",
+     "pct": 75
+    },
+    {
+     "skor": 2,
+     "desc": "Briefing <75% hari kerja",
+     "pct": 75
+    },
+    {
+     "skor": 1,
+     "desc": "Tidak ada materi safety briefing",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 10.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah seluruh pekerja memiliki emergency awareness yang sesuai?",
+   "reg": "GOV-01, BUY-04, BUY-11",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 11.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Kepatuhan SLA Penanganan Temuan Safety Patrol",
+   "reg": "BUY-10, SYS-02, SYS-03",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% close on time",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 12.0,
+   "aspek": "I. HEALTH, SAFETY, ENVIRONMENT (HSE)",
+   "pertanyaan": "Apakah area kerja bersih, rapi, dan bebas dari potensi tersandung, tergelincir, atau bahaya lainnya (housekeeping)?",
+   "reg": "GOV-01, BUY-13, BUY-02",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90% safety patrol tanpa temuan housekeeping",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  }
+ ],
+ "ALL": [
+  {
+   "no": 1.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah pekerja tidak membawa makanan atau minuman berwarna ke area produksi?",
+   "reg": "INT-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 2.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah tidak ditemukan pekerja membawa rokok atau merokok di area produksi?",
+   "reg": "INT-04, BUY-03, GOV-06",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 3.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah tidak terdapat aktivitas jual beli pribadi di area produksi?",
+   "reg": "INT-03, BUY-13",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 4.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah pakaian kerja yang digunakan sesuai standar kebijakan perusahaan?",
+   "reg": "INT-02, INT-08, GOV-04, BUY-08",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 5.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah setiap karyawan yang lembur memiliki persetujuan lembur sukarela yang terdokumentasi?",
+   "reg": "INT-05, GOV-12",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 6.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah jam lembur karyawan tidak melebihi ketentuan yang berlaku (≤ 18 jam/minggu)?",
+   "reg": "INT-05, GOV-12",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 7.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah pekerja hamil ditempatkan dan diatur jam kerjanya sesuai ketentuan perusahaan dan peraturan?",
+   "reg": "INT-06",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 8.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah tidak terdapat indikasi penyalahgunaan zat terlarang di area kerja berdasarkan pengawasan perusahaan?",
+   "reg": "INT-07",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "tidak ada kasus / laporan",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "1 laporan, closed 20 hari (SLA = 30 hari kerja)",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "1 laporan, closed 45 hari",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "2 laporan serupa dalam setahun",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "ada kasus terbukti",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 9.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah mekanisme grievance tersedia, disosialisasikan, dan tidak terdapat kasus terbukti yang belum ditangani terkait pelecehan, kekerasan, atau pelanggaran HAM?",
+   "reg": "INT-07, SYS-01",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "tidak ada kasus / laporan",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "1 laporan, closed 20 hari (SLA = 30 hari kerja)",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "1 laporan, closed 45 hari",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "2 laporan serupa dalam setahun",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "ada kasus terbukti",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 10.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah tidak terdapat pekerja di bawah umur sesuai peraturan?",
+   "reg": "GOV-11, GOV-12",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "tidak ada kasus / laporan",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "1 laporan, closed 20 hari (SLA = 30 hari kerja)",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "1 laporan, closed 45 hari",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "2 laporan serupa dalam setahun",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "ada kasus terbukti",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 11.0,
+   "aspek": "II. LABOR / SOCIAL COMPLIANCE",
+   "pertanyaan": "Apakah tidak terdapat perlakuan diskriminatif berdasarkan gender, status, atau latar belakang?",
+   "reg": "INT-07",
+   "mode": "pilih",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "tidak ada kasus / laporan",
+     "pct": null
+    },
+    {
+     "skor": 4,
+     "desc": "1 laporan, closed 20 hari (SLA = 30 hari kerja)",
+     "pct": null
+    },
+    {
+     "skor": 3,
+     "desc": "1 laporan, closed 45 hari",
+     "pct": null
+    },
+    {
+     "skor": 2,
+     "desc": "2 laporan serupa dalam setahun",
+     "pct": null
+    },
+    {
+     "skor": 1,
+     "desc": "ada kasus terbukti",
+     "pct": null
+    }
+   ]
+  },
+  {
+   "no": 1.0,
+   "aspek": "III. SYSTEM / LEGAL",
+   "pertanyaan": "Apakah SOP dan Instruksi Kerja (IK) yang berlaku telah sesuai dengan proses kerja aktual di area kerja dan dipatuhi oleh pekerja?",
+   "reg": "SYS-01, SYS-04, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 2.0,
+   "aspek": "III. SYSTEM / LEGAL",
+   "pertanyaan": "Apakah seluruh dokumen yang digunakan dalam proses kerja (SOP, IK, Form, Visual Aid) merupakan dokumen yang valid, terkendali, dan disetujui sesuai sistem document control perusahaan?",
+   "reg": "SYS-01, BUY-01, SYS-04",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 3.0,
+   "aspek": "III. SYSTEM / LEGAL",
+   "pertanyaan": "Kesesuaian Instruksi Kerja (IK) dan SOP dengan proses kerja\nSeluruh dokumen yang digunakan pada proses produksi sudah valid?",
+   "reg": "SYS-01, SYS-04, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 4.0,
+   "aspek": "III. SYSTEM / LEGAL",
+   "pertanyaan": "Apakah setiap perubahan SOP / IK terdokumentasi, disetujui, dan disosialisasikan sebelum diberlakukan?",
+   "reg": "SYS-01, SYS-04, BUY-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 5.0,
+   "aspek": "III. SYSTEM / LEGAL",
+   "pertanyaan": "Apakah dokumen yang sudah tidak berlaku telah ditarik dan tidak ditemukan digunakan di area kerja?",
+   "reg": "SYS-04, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  },
+  {
+   "no": 6.0,
+   "aspek": "III. SYSTEM / LEGAL",
+   "pertanyaan": "Apakah SOP / IK direview secara berkala sesuai jadwal yang ditetapkan perusahaan atau setelah perubahan proses?",
+   "reg": "SYS-04, SYS-01",
+   "mode": "counter",
+   "rubrik": [
+    {
+     "skor": 5,
+     "desc": "Kepatuhan ≥ 90%",
+     "pct": 90
+    },
+    {
+     "skor": 4,
+     "desc": "Kepatuhan ≥ 80%",
+     "pct": 80
+    },
+    {
+     "skor": 3,
+     "desc": "Kepatuhan ≥ 70%",
+     "pct": 70
+    },
+    {
+     "skor": 2,
+     "desc": "Kepatuhan ≥ 60%",
+     "pct": 60
+    },
+    {
+     "skor": 1,
+     "desc": "Kepatuhan < 60%",
+     "pct": 60
+    }
+   ]
+  }
+ ]
+}
