@@ -78,14 +78,53 @@ if skor_1 < 4:
 
 st.markdown("---")
 
-# --- PERTANYAAN 2 ---
+# --- PERTANYAAN 2 (skor otomatis dari counter, bukan pilih manual) ---
 st.markdown("### **P2. Aspek K3 - Keamanan Mesin Produksi**")
 st.write("Apakah seluruh mesin jahit (Sewing Machine) telah dilengkapi dengan komponen keselamatan standar seperti *finger guard* dan *pulley guard*?")
-skor_2 = st.radio("Skor Kepatuhan P2:", options=[1, 2, 3, 4, 5], index=4, key="skor_p2", horizontal=True)
+
+def hitung_skor_kepatuhan(persen: float) -> int:
+    # Rubrik ini diambil persis dari file H-CPI asli (sheet Produksi Sewing,
+    # pertanyaan needle guard/pulley guard). Kalau pertanyaan lain punya
+    # ambang batas berbeda, ubah angka di bawah ini sesuai Question_Bank.
+    if persen >= 90:
+        return 5
+    if persen >= 80:
+        return 4
+    if persen >= 70:
+        return 3
+    if persen >= 60:
+        return 2
+    return 1
+
+total_mesin_p2 = st.number_input("Total mesin sewing yang diperiksa:", min_value=1, value=100, step=1, key="total_p2")
+
+if "temuan_p2" not in st.session_state:
+    st.session_state.temuan_p2 = 0
+
+st.write("Temuan: mesin tanpa needle guard / pulley guard yang sesuai")
+c1, c2, c3 = st.columns([1, 2, 1])
+with c1:
+    if st.button("➖", key="minus_p2"):
+        st.session_state.temuan_p2 = max(0, st.session_state.temuan_p2 - 1)
+with c2:
+    st.markdown(f"<div style='text-align:center;font-size:28px;font-weight:bold'>{st.session_state.temuan_p2}</div>", unsafe_allow_html=True)
+with c3:
+    if st.button("➕", key="plus_p2"):
+        st.session_state.temuan_p2 = min(total_mesin_p2, st.session_state.temuan_p2 + 1)
+
+temuan_p2 = st.session_state.temuan_p2
+mesin_patuh_p2 = total_mesin_p2 - temuan_p2
+persen_p2 = (mesin_patuh_p2 / total_mesin_p2) * 100
+skor_2 = hitung_skor_kepatuhan(persen_p2)
+
+mcol1, mcol2 = st.columns(2)
+mcol1.metric("Kepatuhan", f"{persen_p2:.0f}%")
+mcol2.metric("Skor otomatis", skor_2)
+
 catatan_2 = st.text_input("Catatan Temuan Lapangan P2 (Wajib jika skor < 4):", key="catat_p2", placeholder="Isi detail jika ada pelanggaran...")
 foto_2 = None
 if skor_2 < 4:
-    st.warning("⚠️ **SHEVA AI Warning:** Skor kritis terdeteksi di area mesin produksi!")
+    st.warning(f"⚠️ **SHEVA AI Warning:** Kepatuhan {persen_p2:.0f}% (skor {skor_2}) — di bawah standar! AI Agent akan otomatis menandai ini sebagai 'OPEN target' dan memicu alert perbaikan.")
     foto_2 = st.file_uploader("📸 Unggah Foto Bukti Pelanggaran Mesin:", type=["jpg", "png", "jpeg"], key="foto_p2")
 
 st.markdown("---")
@@ -134,7 +173,7 @@ if submit_btn:
                 status_2 = "Closed" if skor_2 >= 4 else "Open"
                 row_2 = [id_audit_2, timestamp_now, auditor, periode, area,
                           "I. HEALTH, SAFETY, ENVIRONMENT (HSE)", "2", "Finger Guard Mesin Sewing",
-                          "", "", str(skor_2), str(skor_2), "SYS-04", catatan_2, evidence_2,
+                          str(mesin_patuh_p2), str(total_mesin_p2), str(skor_2), str(skor_2), "SYS-04", catatan_2, evidence_2,
                           status_2, ""]
 
                 db_sheet.append_rows([row_1, row_2])
