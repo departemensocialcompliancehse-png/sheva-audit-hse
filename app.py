@@ -31,6 +31,14 @@ except Exception as e:
     st.error(f"❌ Gagal koneksi ke database: {e}")
     st.stop()
 
+# Tambahan daftar Factory sesuai dengan operasional perusahaan
+FACTORY_OPTIONS = {
+    "FACTORY-A": "Factory A",
+    "FACTORY-B": "Factory B",
+    "FACTORY-F": "Factory F",
+    "FACTORY-K": "Factory K (IHP)"
+}
+
 AREA_OPTIONS = {
     "MT-LINE": "MT Line",
     "MT-RND": "MT R&D",
@@ -41,24 +49,29 @@ AREA_OPTIONS = {
     "PRD-GUDANGJADI": "Produksi - Gudang Jadi",
 }
 
-# 3. INFORMASI UMUM
+# 3. INFORMASI UMUM (SEKARANG ADA 3 KOLOM INPUT)
 st.subheader("📋 1. Informasi Umum Inspeksi")
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 with col1:
     auditor = st.text_input("Nama Auditor/Inspektur:", placeholder="Contoh: Tim HSE")
-    periode = st.selectbox("Periode Evaluasi:", ["Juli 2026", "Agustus 2026", "September 2026"])
 with col2:
-    area = st.selectbox(
-        "Pilih Area Kerja / Fasilitas Pabrik:",
-        options=list(AREA_OPTIONS.keys()),
-        format_func=lambda code: f"{code} — {AREA_OPTIONS[code]}",
+    factory_select = st.selectbox(
+        "Pilih Lokasi Factory:",
+        options=list(FACTORY_OPTIONS.keys()),
+        format_func=lambda code: FACTORY_OPTIONS[code]
     )
+with col3:
+    area_select = st.selectbox(
+        "Pilih Area Kerja / Fasilitas:",
+        options=list(AREA_OPTIONS.keys()),
+        format_func=lambda code: AREA_OPTIONS[code],
+    )
+    periode = "Juli 2026"  # Di-hardcode internal atau bisa disesuaikan nanti
 
 st.markdown("---")
 st.subheader("🔍 2. Parameter Kepatuhan K3 & Sosial")
 st.write("Isi evaluasi kondisi riil di lantai pabrik saat ini:")
 
-# Fungsi pembantu untuk perhitungan skor
 def hitung_skor_kepatuhan(persen: float) -> int:
     if persen >= 90: return 5
     if persen >= 80: return 4
@@ -66,7 +79,7 @@ def hitung_skor_kepatuhan(persen: float) -> int:
     if persen >= 60: return 2
     return 1
 
-# --- PERTANYAAN 1 (SUDAH DIUBAH MENJADI COUNTER BISA KETIK MANUAL) ---
+# --- PERTANYAAN 1 ---
 st.markdown("### **P1. Aspek K3 - Proteksi Kebakaran**")
 st.write("Apakah semua APAR di area kerja terpasang jelas, tidak terhalang barang, dan kartu inspeksi bulanan dalam kondisi aktif?")
 
@@ -81,7 +94,6 @@ with c1_p1:
     if st.button("➖", key="minus_p1"):
         st.session_state.temuan_p1 = max(0, st.session_state.temuan_p1 - 1)
 with c2_p1:
-    # Menggunakan number_input tanpa label agar bisa diketik manual via keyboard
     st.session_state.temuan_p1 = st.number_input(
         "Jumlah temuan P1", 
         min_value=0, 
@@ -112,7 +124,7 @@ if skor_1 < 4:
 
 st.markdown("---")
 
-# --- PERTANYAAN 2 (COUNTER SEKARANG BISA KETIK MANUAL) ---
+# --- PERTANYAAN 2 ---
 st.markdown("### **P2. Aspek K3 - Keamanan Mesin Produksi**")
 st.write("Apakah seluruh mesin jahit (Sewing Machine) telah dilengkapi dengan komponen keselamatan standar seperti *finger guard* dan *pulley guard*?")
 
@@ -127,7 +139,6 @@ with c1_p2:
     if st.button("➖", key="minus_p2"):
         st.session_state.temuan_p2 = max(0, st.session_state.temuan_p2 - 1)
 with c2_p2:
-    # Menggunakan number_input tanpa label agar bisa diketik manual via keyboard
     st.session_state.temuan_p2 = st.number_input(
         "Jumlah temuan P2", 
         min_value=0, 
@@ -180,7 +191,6 @@ if submit_btn:
     else:
         with st.spinner("Mengirim data ke database sentral..."):
             try:
-                # Mengunci waktu submisi seragam di awal klik
                 waktu_submisi = datetime.now()
                 timestamp_now = waktu_submisi.strftime("%Y-%m-%d %H:%M:%S")
                 string_id_waktu = waktu_submisi.strftime("%Y%m%d%H%M%S")
@@ -188,16 +198,20 @@ if submit_btn:
                 evidence_1 = foto_1.name if foto_1 is not None else ""
                 evidence_2 = foto_2.name if foto_2 is not None else ""
 
+                # FORMULASI KLUNCI: Gabungkan kode factory dan kode area (Kolom ke-5 di Google Sheets)
+                # Contoh hasil akhir di kolom Area_Kode: "FACTORY-A / PRD-SEWING"
+                area_gabungan = f"{factory_select} / {area_select}"
+
                 id_audit_1 = f"AUD-{string_id_waktu}-01"
                 status_1 = "Closed" if skor_1 >= 4 else "Open"
-                row_1 = [id_audit_1, timestamp_now, auditor, periode, area,
+                row_1 = [id_audit_1, timestamp_now, auditor, "Juli 2026", area_gabungan,
                          "I. HEALTH, SAFETY, ENVIRONMENT (HSE)", "1", "Proteksi APAR Lapangan",
                          str(apar_patuh_p1), str(total_apar_p1), str(skor_1), str(skor_1), "GOV-11", catatan_1, evidence_1,
                          status_1, ""]
 
                 id_audit_2 = f"AUD-{string_id_waktu}-02"
                 status_2 = "Closed" if skor_2 >= 4 else "Open"
-                row_2 = [id_audit_2, timestamp_now, auditor, periode, area,
+                row_2 = [id_audit_2, timestamp_now, auditor, "Juli 2026", area_gabungan,
                          "I. HEALTH, SAFETY, ENVIRONMENT (HSE)", "2", "Finger Guard Mesin Sewing",
                          str(mesin_patuh_p2), str(total_mesin_p2), str(skor_2), str(skor_2), "SYS-04", catatan_2, evidence_2,
                          status_2, ""]
@@ -205,6 +219,6 @@ if submit_btn:
                 db_sheet.append_rows([row_1, row_2])
 
                 st.balloons()
-                st.success("🎉 BERHASIL! Data sukses terekam. SHEVA AI Agent sedang memproses sinkronisasi dasbor eksekutif.")
+                st.success("🎉 BERHASIL! Data sukses terekam dengan klasifikasi Factory. Dashboard eksekutif siap disinkronkan.")
             except Exception as err:
                 st.error(f"Gagal mengirim data: {err}")
