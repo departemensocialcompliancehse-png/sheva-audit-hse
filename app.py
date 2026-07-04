@@ -41,12 +41,11 @@ except Exception as e:
     st.stop()
 
 # ==============================================================================
-# 3. FUNGSI UTAMA: UPLOAD KE GOOGLE DRIVE (FIXED FOLDER PENAMPUNG)
+# 3. FUNGSI UTAMA: UPLOAD KE GOOGLE DRIVE (FIXED BYPASS QUOTA)
 # ==============================================================================
 def upload_ke_drive(file_obj, credentials_obj):
     """
-    Mengunggah file dari Streamlit ke Folder Google Drive Spesifik yang didelegasikan.
-    Menggunakan kuota storage user utama, namun link file tetap dikunci privat per item.
+    Mengunggah file dari Streamlit ke Folder Google Drive Spesifik dengan bypass kuota.
     """
     try:
         drive_service = build('drive', 'v3', credentials=credentials_obj)
@@ -54,7 +53,6 @@ def upload_ke_drive(file_obj, credentials_obj):
         # Penamaan file unik berbasis waktu agar tidak saling menimpa
         nama_file_drive = f"EVIDENCE_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{file_obj.name}"
         
-        # Skenario yang Diperbaiki: File dialihkan ke folder pribadi Anda agar bypass kuota 0 bytes
         file_metadata = {
             'name': nama_file_drive,
             'parents': ['18wR26aHBTTA7gfRfdRr_bCW5160r_vX0']
@@ -63,19 +61,21 @@ def upload_ke_drive(file_obj, credentials_obj):
         # Konversi struktur file Streamlit ke Media Upload Stream
         media = MediaIoBaseUpload(io.BytesIO(file_obj.read()), mimetype=file_obj.type, resumable=True)
         
-        # Eksekusi unggahan ke Drive
+        # FIX: Tambah supportsAllDrives=True agar Service Account meminjam kuota folder induk pribadi Anda
         uploaded_file = drive_service.files().create(
             body=file_metadata, 
             media_body=media, 
-            fields='id, webViewLink'
+            fields='id, webViewLink',
+            supportsAllDrives=True
         ).execute()
         
         file_id = uploaded_file.get('id')
         
-        # Mengubah izin file menjadi publik (Siapa saja yang memiliki link bisa melihat/Reader)
+        # FIX: Tambah supportsAllDrives=True di bagian perizinan publik per file
         drive_service.permissions().create(
             fileId=file_id,
-            body={'type': 'anyone', 'role': 'reader'}
+            body={'type': 'anyone', 'role': 'reader'},
+            supportsAllDrives=True
         ).execute()
         
         return uploaded_file.get('webViewLink')
@@ -251,10 +251,10 @@ if submit_btn:
                 timestamp_now = waktu_submisi.strftime("%Y-%m-%d %H:%M:%S")
                 string_id_waktu = waktu_submisi.strftime("%Y%m%d%H%M%S")
 
-                # --- PROSES INTEGRASI UPLOAD DRIVE (FIXED) ---
+                # --- PROSES INTEGRASI UPLOAD DRIVE (FIXED MULTI-DRIVE) ---
                 evidence_1 = upload_ke_drive(foto_1, creds) if foto_1 is not None else ""
                 evidence_2 = upload_ke_drive(foto_2, creds) if foto_2 is not None else ""
-                # ---------------------------------------------
+                # ---------------------------------------------------------
 
                 # FORMULASI KUNCI: Gabungkan kode factory dan kode area
                 area_gabungan = f"{factory_select} / {area_select}"
@@ -291,7 +291,7 @@ if submit_btn:
                 try:
                     requests.post(URL_WEBHOOK_MAKE, json=payload_webhook, timeout=5)
                 except Exception:
-                    pass  # Mengamankan aplikasi dari crash jika webhook Make.com kelebihan beban
+                    pass  # Proteksi kelancaran aplikasi
 
                 st.balloons()
                 st.success("🎉 BERHASIL! Data sukses terekam dengan tautan bukti foto. Dashboard eksekutif siap disinkronkan.")
