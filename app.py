@@ -1,10 +1,15 @@
 import streamlit as st
 import gspread
 from google.oauth2.service_account import Credentials
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaIoBaseUpload
 from datetime import datetime
-import requests  # Ditambahkan untuk integrasi ke Webhook Make.com
+import requests
+import io
 
+# ==============================================================================
 # 1. SETUP KONFIGURASI HALAMAN
+# ==============================================================================
 st.set_page_config(page_title="SHEVA HSE COMPLIANCE", page_icon="🛡️", layout="centered")
 
 st.markdown("""
@@ -19,20 +24,65 @@ st.title("🛡️ SHEVA HSE & Social Compliance Digital Tools")
 st.caption("PT Adira Semesta Industry - Integrated with SHEVA AI Agent System")
 st.markdown("---")
 
-# 2. KONEKSI KE GOOGLE SHEETS
+# ==============================================================================
+# 2. KONEKSI KE GOOGLE SERVICES (SHEETS & DRIVE)
+# ==============================================================================
 try:
     scope = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
     creds_dict = st.secrets["gcp_service_account"]
     creds = Credentials.from_service_account_info(dict(creds_dict), scopes=scope)
+    
+    # Otorisasi Gspread untuk Google Sheets
     client = gspread.authorize(creds)
-
     sheet = client.open("SHEVA - AUDIT DIGITAL")
     db_sheet = sheet.worksheet("AUDIT_CHECKLIST_DATABASE")
 except Exception as e:
     st.error(f"❌ Gagal koneksi ke database: {e}")
     st.stop()
 
-# Tambahan daftar Factory sesuai dengan operasional perusahaan
+# ==============================================================================
+# 3. FUNGSI UTAMA: UPLOAD KE GOOGLE DRIVE (SKENARIO A - PRIVASI MUTLAK)
+# ==============================================================================
+def upload_ke_drive(file_obj, credentials_obj):
+    """
+    Mengunggah file dari Streamlit ke Root Google Drive secara anonim-publik (View Only).
+    PIC hanya bisa melihat foto spesifik miliknya tanpa bisa mengintip dokumen/area lain.
+    """
+    try:
+        drive_service = build('drive', 'v3', credentials=credentials_obj)
+        
+        # Penamaan file unik berbasis waktu agar tidak saling menimpa
+        nama_file_drive = f"EVIDENCE_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{file_obj.name}"
+        
+        # Skenario A: Tanpa menyertakan properti 'parents' agar file tersimpan di Root Drive mandiri
+        file_metadata = {
+            'name': nama_file_drive
+        }
+        
+        # Konversi struktur file Streamlit ke Media Upload Stream
+        media = MediaIoBaseUpload(io.BytesIO(file_obj.read()), mimetype=file_obj.type, resumable=True)
+        
+        # Eksekusi unggahan ke Drive
+        uploaded_file = drive_service.files().create(
+            body=file_metadata, 
+            media_body=media, 
+            fields='id, webViewLink'
+        ).execute()
+        
+        file_id = uploaded_file.get('id')
+        
+        # Mengubah izin file menjadi publik (Siapa saja yang memiliki link bisa melihat/Reader)
+        drive_service.permissions().create(
+            fileId=file_id,
+            body={'type': 'anyone', 'role': 'reader'}
+        ).execute()
+        
+        return uploaded_file.get('webViewLink')
+    except Exception as e:
+        st.error(f"⚠️ Gagal memproses unggahan ke Google Drive: {e}")
+        return "Gagal Upload Link"
+
+# Daftar Factory sesuai dengan operasional perusahaan
 FACTORY_OPTIONS = {
     "FACTORY-A": "Factory A",
     "FACTORY-B": "Factory B",
@@ -44,13 +94,15 @@ AREA_OPTIONS = {
     "MT-LINE": "MT Line",
     "MT-RND": "MT R&D",
     "PRD-SEWING": "Produksi - Sewing",
-    "PRD-CUTTING": "Produensing - Cutting",
+    "PRD-CUTTING": "Produksi - Cutting",
     "PRD-ACCESSORIES": "Produksi - Accessories",
     "PRD-DISTRIBUSI": "Produksi - Distribusi",
     "PRD-GUDANGJADI": "Produksi - Gudang Jadi",
 }
 
-# 3. INFORMASI UMUM (SEKARANG ADA 3 KOLOM INPUT)
+# ==============================================================================
+# 4. INFORMASI UMUM INSPEKSI
+# ==============================================================================
 st.subheader("📋 1. Informasi Umum Inspeksi")
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -67,7 +119,7 @@ with col3:
         options=list(AREA_OPTIONS.keys()),
         format_func=lambda code: AREA_OPTIONS[code],
     )
-    periode = "Juli 2026"  # Di-hardcode internal atau bisa disesuaikan nanti
+    periode = "Juli 2026"
 
 st.markdown("---")
 st.subheader("🔍 2. Parameter Kepatuhan K3 & Sosial")
@@ -120,7 +172,7 @@ mcol2_p1.metric("Skor otomatis P1", skor_1)
 catatan_1 = st.text_input("Catatan Temuan Lapangan P1 (Wajib jika skor < 4):", key="catat_p1", placeholder="Isi detail jika ada pelanggaran...")
 foto_1 = None
 if skor_1 < 4:
-    st.warning("⚠️ **SHEVA AI Warning:** Kepatuhan di bawah standar! AI Agent akan otomatis menandai ini sebagai 'OPEN target' its dan memicu alert perbaikan.")
+    st.warning("⚠️ **SHEVA AI Warning:** Kepatuhan di bawah standar! AI Agent akan otomatis menandai ini sebagai 'OPEN target' dan memicu alert perbaikan.")
     foto_1 = st.file_uploader("📸 Unggah Foto Bukti Pelanggaran (Maks 5MB):", type=["jpg", "png", "jpeg"], key="foto_p1")
 
 st.markdown("---")
@@ -170,7 +222,9 @@ if skor_2 < 4:
 
 st.markdown("---")
 
-# 4. LOGIKA SUBMIT
+# ==============================================================================
+# 5. LOGIKA SUBMIT DAN TRANSMISI DATA
+# ==============================================================================
 submit_btn = st.button("🚀 SUBMIT DATA KE SHEVA AI DATABASE")
 
 if submit_btn:
@@ -190,14 +244,16 @@ if submit_btn:
         for e in errors:
             st.error(f"❌ {e}")
     else:
-        with st.spinner("Mengirim data ke database sentral..."):
+        with st.spinner("Mengirim data dan mengunggah bukti ke SHEVA system..."):
             try:
                 waktu_submisi = datetime.now()
                 timestamp_now = waktu_submisi.strftime("%Y-%m-%d %H:%M:%S")
                 string_id_waktu = waktu_submisi.strftime("%Y%m%d%H%M%S")
 
-                evidence_1 = foto_1.name if foto_1 is not None else ""
-                evidence_2 = foto_2.name if foto_2 is not None else ""
+                # --- PROSES INTEGRASI UPLOAD DRIVE (SKENARIO A) ---
+                evidence_1 = upload_ke_drive(foto_1, creds) if foto_1 is not None else ""
+                evidence_2 = upload_ke_drive(foto_2, creds) if foto_2 is not None else ""
+                # --------------------------------------------------
 
                 # FORMULASI KUNCI: Gabungkan kode factory dan kode area
                 area_gabungan = f"{factory_select} / {area_select}"
@@ -216,11 +272,10 @@ if submit_btn:
                          str(mesin_patuh_p2), str(total_mesin_p2), str(skor_2), str(skor_2), "SYS-04", catatan_2, evidence_2,
                          status_2, ""]
 
-                # 1. Kirim data ke Google Sheets
+                # 1. Kirim baris data lengkap (berisi link Drive) ke Google Sheets
                 db_sheet.append_rows([row_1, row_2])
 
                 # 2. INTEGRASI PERMANEN KE MAKE.COM WEBHOOK
-                # Gantilah URL di bawah ini dengan URL asli dari modul Webhooks 1 Anda
                 URL_WEBHOOK_MAKE = "https://hook.eu1.make.com/v0scqi2q6hjurane29w6i6yviohv1jke" 
                 
                 payload_webhook = {
@@ -235,9 +290,9 @@ if submit_btn:
                 try:
                     requests.post(URL_WEBHOOK_MAKE, json=payload_webhook, timeout=5)
                 except Exception:
-                    pass  # Agar aplikasi tidak crash jika koneksi internet lokal ke Webhook tidak stabil
+                    pass  # Mengamankan aplikasi dari crash jika webhook Make.com kelebihan beban
 
                 st.balloons()
-                st.success("🎉 BERHASIL! Data sukses terekam dengan klasifikasi Factory. Dashboard eksekutif siap disinkronkan.")
+                st.success("🎉 BERHASIL! Data sukses terekam dengan tautan bukti foto. Dashboard eksekutif siap disinkronkan.")
             except Exception as err:
                 st.error(f"Gagal mengirim data: {err}")
