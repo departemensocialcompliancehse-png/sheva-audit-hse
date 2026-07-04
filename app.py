@@ -41,12 +41,12 @@ except Exception as e:
     st.stop()
 
 # ==============================================================================
-# 3. FUNGSI UTAMA: UPLOAD KE GOOGLE DRIVE (SKENARIO A - PRIVASI MUTLAK)
+# 3. FUNGSI UTAMA: UPLOAD KE GOOGLE DRIVE (FIXED FOLDER PENAMPUNG)
 # ==============================================================================
 def upload_ke_drive(file_obj, credentials_obj):
     """
-    Mengunggah file dari Streamlit ke Root Google Drive secara anonim-publik (View Only).
-    PIC hanya bisa melihat foto spesifik miliknya tanpa bisa mengintip dokumen/area lain.
+    Mengunggah file dari Streamlit ke Folder Google Drive Spesifik yang didelegasikan.
+    Menggunakan kuota storage user utama, namun link file tetap dikunci privat per item.
     """
     try:
         drive_service = build('drive', 'v3', credentials=credentials_obj)
@@ -54,9 +54,10 @@ def upload_ke_drive(file_obj, credentials_obj):
         # Penamaan file unik berbasis waktu agar tidak saling menimpa
         nama_file_drive = f"EVIDENCE_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{file_obj.name}"
         
-        # Skenario A: Tanpa menyertakan properti 'parents' agar file tersimpan di Root Drive mandiri
+        # Skenario yang Diperbaiki: File dialihkan ke folder pribadi Anda agar bypass kuota 0 bytes
         file_metadata = {
-            'name': nama_file_drive
+            'name': nama_file_drive,
+            'parents': ['18wR26aHBTTA7gfRfdRr_bCW5160r_vX0']
         }
         
         # Konversi struktur file Streamlit ke Media Upload Stream
@@ -250,10 +251,10 @@ if submit_btn:
                 timestamp_now = waktu_submisi.strftime("%Y-%m-%d %H:%M:%S")
                 string_id_waktu = waktu_submisi.strftime("%Y%m%d%H%M%S")
 
-                # --- PROSES INTEGRASI UPLOAD DRIVE (SKENARIO A) ---
+                # --- PROSES INTEGRASI UPLOAD DRIVE (FIXED) ---
                 evidence_1 = upload_ke_drive(foto_1, creds) if foto_1 is not None else ""
                 evidence_2 = upload_ke_drive(foto_2, creds) if foto_2 is not None else ""
-                # --------------------------------------------------
+                # ---------------------------------------------
 
                 # FORMULASI KUNCI: Gabungkan kode factory dan kode area
                 area_gabungan = f"{factory_select} / {area_select}"
